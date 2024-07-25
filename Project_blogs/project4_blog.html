@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copper Price and Status Prediction App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77a1d3 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: right;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        section {
+            padding: 20px 0;
+            border-bottom: #ccc 1px solid;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        .button {
+            display: inline-block;
+            color: #fff;
+            background-color: #77a1d3;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Copper Price and Status Prediction App</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#tools-technologies">Tools and Technologies</a></li>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#usage">Usage</a></li>
+                    <li><a href="#project-structure">Project Structure</a></li>
+                    <li><a href="#contributing">Contributing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="overview" class="container">
+        <h2>Overview</h2>
+        <p>Welcome to the Copper Price and Status Prediction App, a machine learning application designed to predict the selling price and status (Won/Lost) for copper products. This app leverages various machine learning models to aid the copper industry in making data-driven decisions regarding sales and pricing.</p>
+    </section>
+
+    <section id="features" class="container">
+        <h2>Features</h2>
+        <ul>
+            <li><strong>Home Page:</strong> Contains a detailed description of the problem statement, the tools and technologies used, and an overview of the machine learning models implemented.</li>
+            <li><strong>Model Page:</strong> Allows users to input various parameters and get predictions for copper price and status.</li>
+        </ul>
+    </section>
+
+    <section id="tools-technologies" class="container">
+        <h2>Tools and Technologies Used</h2>
+        <ul>
+            <li>Programming Language: Python</li>
+            <li>Web Framework: Streamlit</li>
+            <li>Libraries: NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, Pickle</li>
+        </ul>
+    </section>
+
+    <section id="getting-started" class="container">
+        <h2>Getting Started</h2>
+        <h3>Prerequisites</h3>
+        <p>Make sure you have Python installed on your system. You can download it from the <a href="https://www.python.org/downloads/" target="_blank">official Python website</a>.</p>
+        
+        <h3>Installation</h3>
+        <pre>
+<code>git clone https://github.com/your-username/copper-prediction-app.git
+cd copper-prediction-app
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+pip install -r requirements.txt
+streamlit run app.py</code>
+        </pre>
+    </section>
+
+    <section id="usage" class="container">
+        <h2>Usage</h2>
+        <h3>Home Page</h3>
+        <p>The home page provides an overview of the project, including:</p>
+        <ul>
+            <li>Problem Statement</li>
+            <li>Tools and Technologies Used</li>
+            <li>Description of the Machine Learning Models (ExtraTreeRegressor for Regression and RandomForestClassifier for Classification)</li>
+            <li>Author Information</li>
+        </ul>
+
+        <h3>Model Page</h3>
+        <p>On the model page, you can select between Regression and Classification tasks.</p>
+
+        <h4>Regression</h4>
+        <p>Input the required parameters such as Quantity, Thickness, Width, Country Code, Status, Item Type, Application Type, Product Reference, Order Date, and Estimated Delivery Date.</p>
+        <p>Click the "PREDICT PRICE" button to get the predicted selling price of copper.</p>
+
+        <h4>Classification</h4>
+        <p>Input the required parameters such as Quantity, Thickness, Width, Selling Price, Country Code, Item Type, Application Type, Product Reference, Order Date, and Estimated Delivery Date.</p>
+        <p>Click the "PREDICT STATUS" button to get the predicted status (Won/Lost) of the copper deal.</p>
+    </section>
+
+    <section id="project-structure" class="container">
+        <h2>Project Structure</h2>
+        <pre>
+<code>copper-prediction-app/
+├── app.py                   # Main application file
+├── requirements.txt         # Python packages required
+├── models/                  # Directory containing the ML models
+│   ├── et_reg.pkl           # ExtraTreeRegressor model for price prediction
+│   ├── RF_class.pkl         # RandomForestClassifier model for status prediction
+│   ├── country.pkl          # Encoder for country codes
+│   ├── status.pkl           # Encoder for status
+│   ├── item_type.pkl        # Encoder for item types
+│   └── scaling.pkl          # Scaler for data normalization
+└── README.md                # Project documentation</code>
+        </pre>
+    </section>
+
+    <section id="contributing" class="container">
+        <h2>Contributing</h2>
+        <p>Contributions are welcome! Please fork the repository and use a feature branch. Pull requests are warmly welcome.</p>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Created by <strong>Naveen Anandhan</strong> - feel free to contact me!</p>
+    </section>
+
+    <footer>
+        <p>Copper Price and Status Prediction App &copy; 2024</p>
+    </footer>
+</body>
+</html>
