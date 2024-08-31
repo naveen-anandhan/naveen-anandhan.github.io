@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Risk Controller Systems</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bank Risk Controller Systems</h1>
+        <p>Welcome to the Bank Risk Controller Systems project! This application provides insights and predictions related to loan defaulters and non-defaulters using advanced machine learning models and interactive visualizations. It also features a chatbot that can answer questions based on the content of uploaded PDFs.</p>
+    </header>
+
+    <section id="overview">
+        <h2>Project Overview</h2>
+        <p>This project is designed to help users understand their risk profile by predicting whether an individual will default on a loan based on various features. It includes exploratory data analysis (EDA) and a chatbot feature to interact with PDF documents.</p>
+    
+        <h2>Sample Screenshot</h2>
+            <img src="Project_img/pg1.png" alt="Sample Screenshot">
+            <img src="Project_img/pg2.png" alt="Sample Screenshot">
+            <img src="Project_img/pg3.png" alt="Sample Screenshot">
+            <img src="Project_img/pg4.png" alt="Sample Screenshot">
+            <img src="Project_img/pg5.png" alt="Sample Screenshot">
+    </section>
+
+
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>
+                <h3>Model Predictions</h3>
+                <ul>
+                    <li><strong>Single Prediction:</strong> Input loan and personal details to predict if the user is a defaulter or non-defaulter.</li>
+                    <li><strong>Multiple Predictions:</strong> Upload a CSV file containing multiple user records to get predictions for all users.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Exploratory Data Analysis (EDA)</h3>
+                <ul>
+                    <li>Visualize distributions of gender, target (defaulter/non-defaulter), contract types, and loan types.</li>
+                    <li>Includes pie charts and bar charts to illustrate the data.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Chatbot with PDF Interaction</h3>
+                <ul>
+                    <li>Upload a PDF and interact with it through a chatbot interface.</li>
+                    <li>The chatbot uses the content of the PDF to provide relevant responses to user queries.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+        <ul>
+            <li>Python 3.x</li>
+            <li>Libraries:
+                <ul>
+                    <li>pandas</li>
+                    <li>numpy</li>
+                    <li>pickle</li>
+                    <li>streamlit</li>
+                    <li>matplotlib</li>
+                    <li>seaborn</li>
+                    <li>pdfplumber</li>
+                    <li>scikit-learn</li>
+                    <li>langchain</li>
+                    <li>langchain_community</li>
+                    <li>langchain_huggingface</li>
+                    <li>python-dotenv</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="installation">
+        <h2>Installation</h2>
+        <ol>
+            <li>Clone the repository:
+                <pre><code>git clone https://github.com/naveen-anandhan/Bank-Risk-Controller-Systems.git</code></pre>
+            </li>
+            <li>Install the required packages:
+                <pre><code>pip install -r requirements.txt</code></pre>
+            </li>
+            <li>Set up environment variables:
+                <p>Create a <code>.env</code> file and add your Hugging Face API token:</p>
+                <pre><code>HF_TOKEN=your_huggingface_api_token</code></pre>
+            </li>
+        </ol>
+    </section>
+
+    <section id="usage">
+        <h2>Usage</h2>
+        <ol>
+            <li>Run the Streamlit Application:
+                <pre><code>streamlit run web.py</code></pre>
+            </li>
+            <li>Navigate through the application:
+                <ul>
+                    <li><strong>Data:</strong> View sample datasets and model performance metrics.</li>
+                    <li><strong>EDA:</strong> Explore various data visualizations.</li>
+                    <li><strong>Model:</strong> Input user details to get loan defaulter predictions.</li>
+                    <li><strong>Multiple Prediction:</strong> Upload a CSV to get predictions for multiple users.</li>
+                    <li><strong>Chat with PDF:</strong> Upload a PDF and interact with it through the chatbot.</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section id="files">
+        <h2>Files</h2>
+        <ul>
+            <li><strong>app.py:</strong> Main Streamlit application script.</li>
+            <li><strong>eda_data.csv:</strong> Sample data used for exploratory data analysis.</li>
+            <li><strong>model_data.csv:</strong> Data used for displaying sample records.</li>
+            <li><strong>ET_Classifier_model.pkl:</strong> Pickle file for the Extra Trees Classifier model.</li>
+            <li><strong>label_encoders.pkl:</strong> Pickle file for label encoders used in the model.</li>
+            <li><strong>.env:</strong> File to store environment variables (e.g., Hugging Face API token).</li>
+        </ul>
+    </section>
+
+    <section id="contributing">
+        <h2>Contributing</h2>
+        <p>Contributions are welcome! Please fork the repository and submit a pull request with your changes.</p>
+    </section>
+
+    <section id="license">
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Created by Naveen Anandhan - feel free to contact me!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Naveen Anandhan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
